@@ -1,7 +1,7 @@
 #include <iostream>
 #include "HelloWorld.h"
 
-HelloWorld::HelloWorld() : m_button("Hello World!") {
+HelloWorld::HelloWorld() : m_button("wataquad ?!") {
 	// initializaiton list initializes the button with a label
 
 	// set border width of window
@@ -22,5 +22,5 @@ HelloWorld::~HelloWorld() {
 }
 
 void HelloWorld::on_button_clicked() {
-	std::cout << "Hello World!" << std::endl;
+	std::cout << "WATAQUAD ?!" << std::endl;
 }
