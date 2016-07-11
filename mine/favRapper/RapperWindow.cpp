@@ -26,5 +26,9 @@ RapperWindow::~RapperWindow() {
 }
 
 void RapperWindow::on_button_clicked() {
-	std::cout << "Apparently, their favourite rapper is " << ui_text_entry.get_text() << '.' << std::endl;
+	if (ui_text_entry.get_text().empty()) {
+		std::cout << "Uncultured swine - they have no favourite rapper." << std::endl;
+	} else {
+		std::cout << "Apparently, their favourite rapper is " << ui_text_entry.get_text() << '.' << std::endl;
+	}
 }

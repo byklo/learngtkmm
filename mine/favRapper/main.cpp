@@ -2,7 +2,7 @@
 #include "RapperWindow.h"
 
 int main(int argc, char* argv[]) {
-	auto app = Gtk::Application::create(argc, argv, "org.gtkmm.ok");
+	auto app = Gtk::Application::create(argc, argv);
 
 	RapperWindow rapper_window;
 
