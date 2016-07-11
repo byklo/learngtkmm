@@ -5,6 +5,7 @@ HelloWorld::HelloWorld() : m_button("wataquad ?!") {
 	// initializaiton list initializes the button with a label
 
 	// set border width of window
+	// padding?
 	set_border_width(10);
 
 	// "binds" the HelloWorld::on_button_clicked() function to the m_button's click event
@@ -14,6 +15,7 @@ HelloWorld::HelloWorld() : m_button("wataquad ?!") {
 	add(m_button);
 
 	// "display" the button
+	// gtkmm widgets are always invisible until you explicitly call .show() on them
 	m_button.show();
 }
 
