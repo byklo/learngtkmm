@@ -16,13 +16,13 @@ HideButtons::HideButtons() : table(10, 10, true) {
         add( table );
 
         for (int i = 0; i < 100; i++) {
-                buttons[i].signal_clicked().connect(
-                                sigc::mem_fun( *this, &HideButtons::onButtonClicked ));
+                buttons[i].signal_clicked().connect(sigc::mem_fun( *this, &HideButtons::onButtonClicked ));
+                
                 // Add an event for hovering over the button with your mouse.
-								buttons[i].signal_enter().connect(
-                                sigc::mem_fun( *this, &HideButtons::onButtonEnter ));
-                table.attach(buttons[i], i % 10, (i % 10) + 1, i / 10, (i / 10) + 1);
+                buttons[i].signal_enter().connect(sigc::mem_fun( *this, &HideButtons::onButtonEnter ));
+                
                 //table.attach(object, left, right, top, bottom);
+                table.attach(buttons[i], i % 10, (i % 10) + 1, i / 10, (i / 10) + 1);
         }
 
         buttons[0].show();
@@ -38,7 +38,7 @@ void HideButtons::onButtonClicked() {
 }
 
 void HideButtons::onButtonEnter() {
-				// Hide the current button then show the next
+	// Hide the current button then show the next
         buttons[index].hide();
         index = (index + 1) % 100;
         buttons[index].show();
